@@ -1,7 +1,0 @@
-/home/jm-liberty/st/stm32cubeide_2.0.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.linux64_1.0.100.202509120712/tools/arm-none-eabi/include/c++/13.3.1/arm-none-eabi/thumb/v7e-m+fp/hard/bits/gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
-../Src/uart.cpp:33:6:void uart_init()	8	static
-../Src/uart.cpp:86:6:void uart_write_nbyte(int)	16	static
-../Src/uart.cpp:96:6:void uart_write_string(const char*)	16	static
-../Src/uart.cpp:103:6:void uart_write(const char*, size_t)	24	static
-../Src/uart.cpp:110:13:ui16 compute_uart_bd(ui32, ui32)	16	static
-../Src/uart.cpp:114:13:void uart_set_baudrate(ui32, ui32)	16	static

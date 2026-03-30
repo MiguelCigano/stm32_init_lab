@@ -1,3 +1,0 @@
-../Src/adc.cpp:22:6:void pal_adc_init()	4	static
-../Src/adc.cpp:45:6:void start_conversation()	4	static
-../Src/adc.cpp:53:6:ui32 adc_read()	4	static

@@ -1,0 +1,22 @@
+# STM32CubeIDE metadata
+.metadata/
+
+# Build folders
+Debug/
+Release/
+build/
+
+# Object files
+*.o
+*.d
+*.elf
+*.map
+*.bin
+*.hex
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
