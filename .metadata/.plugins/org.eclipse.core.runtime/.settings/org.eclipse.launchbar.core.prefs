@@ -1,0 +1,10 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:printf_adc_cpp_f411_01,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:pwm_uart_adc_cpp_f411_01 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:adc_cpp_f411_01 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:gpio_00_cpp_f412,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:gpio_cpp_f411_01 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:uart_cpp_f411_01,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:uart_cpp_f411_02 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:project_base_cpp_f411 Debug
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:adc_cpp_f411_01\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:adc_cpp_f411_01\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:printf_adc_cpp_f411_01/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:project_base_cpp_f411\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:project_base_cpp_f411\ Debug/activeLaunchTarget=null\:---

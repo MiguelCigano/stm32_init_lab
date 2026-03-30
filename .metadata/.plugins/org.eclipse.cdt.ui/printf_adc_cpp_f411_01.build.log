@@ -1,0 +1,17 @@
+18:30:32 **** Build of configuration Debug for project printf_adc_cpp_f411_01 ****
+make -j8 all 
+arm-none-eabi-g++ "../Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DSTM32F411xE -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"/home/jm-liberty/STM32CubeIDE/workspace_2.0.0/printf_adc_cpp_f411_01/Drivers/CMSIS/Include" -I"/home/jm-liberty/STM32CubeIDE/workspace_2.0.0/printf_adc_cpp_f411_01/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-g++ -o "printf_adc_cpp_f411_01.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/jm-liberty/STM32CubeIDE/workspace_2.0.0/printf_adc_cpp_f411_01/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="printf_adc_cpp_f411_01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: printf_adc_cpp_f411_01.elf
+ 
+arm-none-eabi-size  printf_adc_cpp_f411_01.elf 
+arm-none-eabi-objdump -h -S printf_adc_cpp_f411_01.elf  > "printf_adc_cpp_f411_01.list"
+   text	   data	    bss	    dec	    hex	filename
+   2860	     80	   1904	   4844	   12ec	printf_adc_cpp_f411_01.elf
+Finished building: default.size.stdout
+ 
+Finished building: printf_adc_cpp_f411_01.list
+ 
+
+18:30:33 Build Finished. 0 errors, 0 warnings. (took 783ms)
+

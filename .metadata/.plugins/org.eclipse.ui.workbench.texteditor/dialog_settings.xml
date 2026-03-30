@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
+	<list key="searchhistory">
+		<item value="RCC_AHB1ENR_GPIOAEN_Pos"/>
+		<item value="GPIOAEN"/>
+		<item value="uart_write"/>
+		<item value="periph_clk"/>
+		<item value="periph"/>
+		<item value="baudrate"/>
+		<item value="baurate"/>
+	</list>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="GPIOA_PA5_ODR = 1;"/>
+		<list key="findhistory">
+			<item value="GPIOA_PA5_ODR = 1;"/>
+			<item value="int __io_putchar(int ch) {"/>
+			<item value="// Set output type to push-pull ///"/>
+		</list>
+	</section>
+</section>

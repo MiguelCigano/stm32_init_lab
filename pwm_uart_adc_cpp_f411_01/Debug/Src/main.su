@@ -1,0 +1,5 @@
+/home/jm-liberty/st/stm32cubeide_2.0.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.linux64_1.0.100.202509120712/tools/arm-none-eabi/include/c++/13.3.1/arm-none-eabi/thumb/v7e-m+fp/hard/bits/gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+../Src/main.cpp:35:6:void _delay(ui32)	16	static
+../Src/main.cpp:40:5:int main()	96	static
+../Inc/uart.hpp:19:6:void uart_write(const char (&)[N]) [with unsigned int N = 19]	16	static
+/home/jm-liberty/st/stm32cubeide_2.0.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.linux64_1.0.100.202509120712/tools/arm-none-eabi/include/c++/13.3.1/bits/new_allocator.h:104:7:std::__new_allocator<_Tp>::~__new_allocator() [with _Tp = char]	16	static

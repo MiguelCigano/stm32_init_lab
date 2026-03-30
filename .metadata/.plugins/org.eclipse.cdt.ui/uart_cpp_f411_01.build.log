@@ -1,0 +1,10 @@
+18:30:34 **** Build of configuration Debug for project uart_cpp_f411_01 ****
+make -j8 all 
+arm-none-eabi-size  uart_cpp_f411_01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1284	      0	   1568	   2852	    b24	uart_cpp_f411_01.elf
+Finished building: default.size.stdout
+ 
+
+18:30:34 Build Finished. 0 errors, 0 warnings. (took 130ms)
+

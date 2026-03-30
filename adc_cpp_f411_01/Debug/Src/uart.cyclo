@@ -1,0 +1,5 @@
+../Src/uart.cpp:27:5:int __io_putchar(int)	1
+../Src/uart.cpp:32:6:void uart_init()	1
+../Src/uart.cpp:85:6:void uart_write(int)	2
+../Src/uart.cpp:95:13:ui16 compute_uart_bd(ui32, ui32)	1
+../Src/uart.cpp:99:13:void uart_set_baudrate(ui32, ui32)	1
