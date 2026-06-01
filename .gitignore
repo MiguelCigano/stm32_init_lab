@@ -5,14 +5,21 @@
 Debug/
 Release/
 build/
+cmake-build-*/
 
-# Object files
+# Object files, binaries
 *.o
 *.d
 *.elf
 *.map
 *.bin
 *.hex
+*.list
+*.map
+*.su
+
+# Temporary
+*.tmp
 
 # Logs
 *.log
@@ -20,3 +27,7 @@ build/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Compile objects
+*.a
+*.so

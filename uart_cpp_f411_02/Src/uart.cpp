@@ -33,7 +33,6 @@ void uart_init() {
 	// Enable clock access to GPIOA
 	RCC->AHB1ENR |= GPIOAEN;
 
-	///
 	// RCC->APB1ENR |= UART2EN;
 	// volatile int tmp = RCC->AHB1ENR; // delay dummy read
 

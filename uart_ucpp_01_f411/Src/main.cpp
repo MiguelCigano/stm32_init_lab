@@ -16,6 +16,7 @@
  ******************************************************************************
  */
 
+
 #include "stm32f4xx.h"
 #include <iostream>
 
@@ -39,29 +40,10 @@ typedef  uint8_t  ui8;
 
 static void uart_set_baudrate(USART_TypeDef *USARTx, ui32 PeriphClk, ui32 BaudRate);
 static ui16 compute_uart_baudrate(ui32 PeriphClk, ui32 BaudRate);
+void uart2_tx_init(void);
 void uart2_write(int ch);
 
-void delay(volatile ui32 count)
-{
-    while(count--);
-}
-
-static void uart_set_baudrate(USART_TypeDef *USARTx, ui32 PeriphClk, ui32 BaudRate) {
-	USARTx->BRR = compute_uart_baudrate(PeriphClk, BaudRate);
-}
-
-static ui16 compute_uart_baudrate(ui32 PeriphClk, ui32 BaudRate) {
-	return ( (PeriphClk + (BaudRate / 20)) / BaudRate );
-}
-
-void uart2_write(int ch) {
-	// Make sure the transmit data register is empty
-	while (!(USART2->SR & SR_TXE)) {}
-	// Write to transmit data register
-	USART2->DR = (ch & 0xFF);
-}
-
-int main(void)
+void uart2_tx_init()
 {
 	// Configure UART GPIO pin
 	// -- Enable clock access to GPIOA
@@ -77,9 +59,6 @@ int main(void)
 	GPIOA->AFR[0] |=  (1U << 10);   // AFRL2[ _ : 1 : _ : _ ]
 	GPIOA->AFR[0] &= ~(1U << 11);	// AFRL2[ 0 : _ : _ : _ ]
 
-
-
-
 	// Configure UART module
 	// -- Enable clock access to UART2
 	RCC->APB1ENR |= UART2EN;
@@ -92,8 +71,34 @@ int main(void)
 
 	// -- Enable UART module
 	USART2->CR1 |= CR1_UE;
+}
 
+void delay(volatile ui32 count)
+{
+    while(count--);
+}
 
+static void uart_set_baudrate(USART_TypeDef *USARTx, ui32 PeriphClk, ui32 BaudRate)
+{
+	USARTx->BRR = compute_uart_baudrate(PeriphClk, BaudRate);
+}
+
+static ui16 compute_uart_baudrate(ui32 PeriphClk, ui32 BaudRate)
+{
+	return ( (PeriphClk + (BaudRate / 20)) / BaudRate );
+}
+
+void uart2_write(int ch)
+{
+	// Make sure the transmit data register is empty
+	while (!(USART2->SR & SR_TXE)) {}
+
+	// Write to transmit data  register
+	USART2->DR = (ch & 0xFF);
+}
+
+int main(void)
+{
     // Enable clock to GPIOA and GPIOC
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN; // LED
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN; // Button
@@ -110,9 +115,28 @@ int main(void)
     GPIOC->MODER &= ~(3U << (13 * 2));  // 00 = Input
     GPIOC->PUPDR &= ~(3U << (13 * 2));  // Within pull (resistor in board)
 
+    uart2_tx_init();
+    std::string traffic_light_states = "red,green,OKK";
+    std::string traffic_light_states2 = "green,red,STOP";
 
     while (true)
     {
 
+    	for (const char& c : traffic_light_states) {
+			uart2_write(c);
+		}
+    	uart2_write('\r');
+    	uart2_write('\n');
+
+    	delay(911100);
+
+
+    	for (const char& c : traffic_light_states2) {
+			uart2_write(c);
+		}
+    	uart2_write('\r');
+		uart2_write('\n');
+
+		delay(911100);
     }
 }
